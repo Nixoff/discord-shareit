@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { NotionController } from './Controllers/notion.controller';
-import { NotionService } from './Services/notion.service';
+import { NotionRoutineService } from './Services/notion.service';
 
 @Module({
-  controllers: [NotionController],
-  providers: [NotionService]
+  controllers: [],
+  providers: [NotionRoutineService]
 })
-export class NotionModule {}
+
+export class NotionModule { }
