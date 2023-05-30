@@ -18,7 +18,6 @@ import { RoutineProvider } from './decorators/decorators.provider';
 		NotionModule
 	],
 	providers: [
-		AppService,
 		RoutineProvider
 	]
 })
