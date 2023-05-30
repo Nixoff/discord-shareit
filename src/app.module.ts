@@ -1,8 +1,10 @@
 import { NecordModule } from 'necord';
 import { Module } from '@nestjs/common';
 import { IntentsBitField } from 'discord.js';
-import { AppCommands } from './app.commands';
 import { AppService } from './app.service';
+import { NotionModule } from './notion/notion.module';
+import { RoutineProvider } from './decorators/decorators.provider';
+
 
 @Module({
 	imports: [
@@ -13,8 +15,16 @@ import { AppService } from './app.service';
 				IntentsBitField.Flags.GuildMessages,
 				IntentsBitField.Flags.DirectMessages
 			]
-		})
+		}),
+		NotionModule
 	],
-	providers: [AppCommands, AppService]
+	providers: [
+		AppService,
+		RoutineProvider
+	]
 })
-export class AppModule {}
+
+
+export class AppModule {
+
+}
